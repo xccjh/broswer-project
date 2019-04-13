@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+@mixin bg_circle($l,$t,$w) {
+    width: $w;
+    height: $w;
+    border-radius: 50%;
+    background-image: linear-gradient(#aaa,#eee);
+    position: absolute;
+    left: $l;
+    top:$t;
+    animation: circleRotate 10s linear infinite;
+}
+
+// 背景
+.qq_bg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    animation: bg_move 35s linear infinite;
+    > .cirle1{
+        @include bg_circle(100px,200px,120px);
+    }
+    > .cirle2{
+        @include bg_circle(160px,250px,180px);
+    }
+    > .cirle3{
+        @include bg_circle(800px,100px,100px);
+    }
+    > .cirle4{
+        @include bg_circle(880px,100px,130px);
+    }
+    > .cirle5{
+        @include bg_circle(600px,350px,400px);
+    }
+}
+
+// 第一屏样式
+.first{
+    perspective: 800px;
+    overflow: hidden;
+    .s1{
+        position: relative;
+        width: 880px;
+        margin: 0 auto;
+        transition:transform 1s;
+        > img:nth-of-type(1){
+            position: absolute;
+        }
+    }
+    .s1_begin{
+        transform: translateZ(700px) rotateY(180deg);
+    }
+}
+
+// 第二屏样式
+.second{
+    perspective: 800px;
+    overflow: hidden;
+    .s2 {
+        width: 316px;
+        margin: 0 auto;
+        transition: transform 1s;
+    }
+    .s2_begin{
+        transform: translateZ(-2500px);
+    }
+    .s2_end{
+        transform: translateZ(1500px);
+    }
+}
+
+
+
+
+// 创建背景小球的旋转动画
+@keyframes circleRotate{
+    from {
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg)
+    }
+}
+// 背景移动动画
+@keyframes bg_move{
+    0%{
+        transform: translate(0,0);
+    }
+    100%{
+        transform: translate(-100%,0);
+    }
+}

@@ -1,0 +1,186 @@
+#qq_bg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    animation: circleMove 20s infinite linear;
+    transition: transform 1s;
+}
+/* 球球的旋转，只有第一屏没有， 其它的屏都有这个旋转样式 */
+.qq_rotate{
+    transform: rotate(-35deg);
+}
+@keyframes circleMove{
+    0%{}
+    100%{
+        transform:translate(-100%,0);
+    }
+}
+@keyframes circleRotate{
+    0%{}
+    100%{
+        transform:rotate(360deg);
+    }
+}
+#qq_bg > div{
+    border-radius: 50%;
+    background-image: linear-gradient(#ccc,#fff);
+    position: absolute;
+    animation: circleRotate 5s infinite linear;
+}
+.circle1{
+    width: 150px;
+    height: 150px;
+    left: 100px;
+    top:150px;
+}
+
+.circle2{
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 80%;
+  }
+  .circle3{
+    width: 120px;
+    height: 120px;
+    top: 10%;
+    left: 83%;
+  }
+  .circle4{
+    width: 180px;
+    height: 180px;
+    top: 20%;
+    left: 5%;
+  }
+  .circle5{
+    width: 220px;
+    height: 220px;
+    top: 25%;
+    left: 15%;
+  }
+  .circle6{
+    width: 350px;
+    height: 350px;
+    top: 50%;
+    left: 55%;
+  }
+
+  /* 第一屏制作  */
+  .s1{
+      perspective: 1000px;
+      position: relative;
+      overflow: hidden;
+  }
+  .s1_main{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition:transform 1s;
+  }
+ .s1_main_begin{
+     /* 因为这两个样式作用于同一个div,而这个div之前已经添加过一个transform样式，并且我们一直需要他，所以现在这个样式中再次添加transform的时候，一定要保证之前的值没有任何的破坏 */
+    transform: translate3d(-50%,-50%,700px) rotateY(180deg);
+  }
+  .s1_skin{
+      position: absolute;
+      left: 0;
+      top: 0;
+  }
+
+
+  /* 第二屏 */
+  .s2{
+    perspective: 1000px;
+    position: relative;
+  }
+  .s2_main{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: transform 1s;
+  }
+  .s2_main_begin{
+      transform: translate3d(-50%,-50%,-10000px);
+  }
+  .s2_main_end{
+    transform: translate3d(-50%,-50%,1000px);
+    }
+  .s2_main > img{
+      display: block;
+  }
+
+  .s3{
+      perspective: 1000px;
+      position: relative;
+  }
+  .s3_main{
+      position: absolute;
+      left:30%;
+      top:25%;
+      width: 100%;
+      height: 100%;
+      transform: rotateX(30deg);
+  }
+  .s3_main .s3_browser{
+      width: 100%;
+      height: 100%;
+      border:1px solid #000;
+    /* 第三屏的效果不是直接添加给s3_main,面是添加给它的子元素的，所以过渡效果应该添加给具体的子元素 */
+    transition: transform 1s;
+  }
+  .s3_main .s3_title{
+      position: absolute;
+      left: -300px;
+      top:100px;
+      transition: transform 1s;
+  }
+  .s3_main_begin .s3_browser{
+    transform: translate(2000px,2000px);
+  }
+  .s3_main_begin .s3_title{
+      transform: translateY(1000px);
+}
+
+/* 第四屏 */
+.s4{
+    perspective: 1000px;
+}
+.s4_main{
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: transform 1s;
+}
+.s4_main_begin{
+    transform: translate(-180%,-70%) rotate(30deg);
+}
+.s4_img1{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.s4_img2{
+    position: absolute;
+    left: 0;
+    top: 215px;
+}
+.s4_img3{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.s4_img4{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.s4_img5{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}

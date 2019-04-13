@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.qq_bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  -webkit-animation: bg_move 35s linear infinite;
+          animation: bg_move 35s linear infinite;
+}
+
+.qq_bg > .cirle1 {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#aaa), to(#eee));
+  background-image: linear-gradient(#aaa, #eee);
+  position: absolute;
+  left: 100px;
+  top: 200px;
+  -webkit-animation: circleRotate 10s linear infinite;
+          animation: circleRotate 10s linear infinite;
+}
+
+.qq_bg > .cirle2 {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#aaa), to(#eee));
+  background-image: linear-gradient(#aaa, #eee);
+  position: absolute;
+  left: 160px;
+  top: 250px;
+  -webkit-animation: circleRotate 10s linear infinite;
+          animation: circleRotate 10s linear infinite;
+}
+
+.qq_bg > .cirle3 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#aaa), to(#eee));
+  background-image: linear-gradient(#aaa, #eee);
+  position: absolute;
+  left: 800px;
+  top: 100px;
+  -webkit-animation: circleRotate 10s linear infinite;
+          animation: circleRotate 10s linear infinite;
+}
+
+.qq_bg > .cirle4 {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#aaa), to(#eee));
+  background-image: linear-gradient(#aaa, #eee);
+  position: absolute;
+  left: 880px;
+  top: 100px;
+  -webkit-animation: circleRotate 10s linear infinite;
+          animation: circleRotate 10s linear infinite;
+}
+
+.qq_bg > .cirle5 {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#aaa), to(#eee));
+  background-image: linear-gradient(#aaa, #eee);
+  position: absolute;
+  left: 600px;
+  top: 350px;
+  -webkit-animation: circleRotate 10s linear infinite;
+          animation: circleRotate 10s linear infinite;
+}
+
+.first {
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  overflow: hidden;
+}
+
+.first .s1 {
+  position: relative;
+  width: 880px;
+  margin: 0 auto;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.first .s1 > img:nth-of-type(1) {
+  position: absolute;
+}
+
+.first .s1_begin {
+  -webkit-transform: translateZ(700px) rotateY(180deg);
+          transform: translateZ(700px) rotateY(180deg);
+}
+
+.second {
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  overflow: hidden;
+}
+
+.second .s2 {
+  width: 316px;
+  margin: 0 auto;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.second .s2_begin {
+  -webkit-transform: translateZ(-2500px);
+          transform: translateZ(-2500px);
+}
+
+.second .s2_end {
+  -webkit-transform: translateZ(1500px);
+          transform: translateZ(1500px);
+}
+
+@-webkit-keyframes circleRotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes circleRotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes bg_move {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+}
+
+@keyframes bg_move {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+}
+/*# sourceMappingURL=index.css.map */
